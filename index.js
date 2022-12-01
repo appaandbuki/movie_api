@@ -1,6 +1,11 @@
 //express is a package so it needs to be required
 const express = require('express');
+    morgan = require('morgan');
 const app = express();
+
+//app.use() invokes a middleware function- here it is morgan
+//the 'common' parameter here specifies that requests should be logged using Morgan's "common" format
+app.use(morgan('common'));
 
 //create an Express GET route located at the endpoint “/movies” that returns a JSON object containing data about your top 10 movies.
 let topMovies = [
@@ -54,6 +59,10 @@ app.get ('/movies', (req,res) => {
 app.get('/', (req, res) => {
     res.send('Welcome to my Top Movie List! ')
 });
+
+//serves the documentation.html files from the public folder (rather than using the http, url, and fs module)
+app.use(express.static('public'));
+
 
 // listen for requests
 app.listen(8080, () => {
