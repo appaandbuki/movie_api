@@ -63,6 +63,13 @@ app.get('/', (req, res) => {
 //serves the documentation.html files from the public folder (rather than using the http, url, and fs module)
 app.use(express.static('public'));
 
+//an error-handling middleware function
+//the first argument "err" allows you to recieve info about the error
+//err.stack logs information about the current error to the terminal; res.status().send sets and sends the string as the response body
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something Broke!');
+});
 
 // listen for requests
 app.listen(8080, () => {
