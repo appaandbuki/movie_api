@@ -17,6 +17,18 @@ http.createServer ((request, response) => {
     //This will be where we store the path of the file (now it just acts as an empty container)
     filePath = '';
 
+   //EXPLANATION of apppendFile() BELOW:  whenever a request is made to the server, this will add the visited URL and the timestam p the request was received
+    //append File method (of the fs module) takes 3 arguements- the files name in which you want to append your new info, the info to be appened, and an error handling function
+    fs.appendFile('log.txt', 'URL: ' + addr + '\nTimestamp:
+     + new Date() + '\n\n', (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log ('Added to log.');
+        }
+     });
+
+
     //EXPLANATION OF IF/ELSE BELOW: this checks whether the pathname of q (the URL) includes the word "documentation".
     //If it does, it pieces together __dirname and "/documentation", adding them as a complete path name to the currently empty filePath variable
     //If it does not, it returns the "index.html" instead, given that it exists (the user is returned to the homepage)
@@ -48,6 +60,12 @@ http.createServer ((request, response) => {
         } else {
             console.log ('Added to log.');
         }
+    //this tells the server to add a header to the response it sends back (along with the HTTP status code "200" for "OK")
+    response.writeHead (200, {'Content-Type': 'text/html'})
     });
+    //(write() = writes content to a file) (data= the contents of the file)
+    response.write(data);
+    //ends the response
+    response.end();
   //listens for a response on port 8080
 }).listen(8080);
