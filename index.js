@@ -20,57 +20,57 @@ let users = [
     {
       id : 2,
       name : 'Fred',
-      favoriteMovies: ['Family Reunion']
+      favoriteMovies: ['Spirited Away']
     },
   ]
 
 //create an Express GET route located at the endpoint “/movies” that returns a JSON object containing data about your top 10 movies.
 let movies = [
     {
-        "Title": "Family Reunion",
-        "Description": "The Mckellans recall a cross-country move to Georgia that was packed with misadventure , from a weird proposal and a creepy ritual to a frisky raccoon.",
+        "Title": "Howl/'s Moving Castle",
+        "Description": "This Japanese animated, fantasy film is set in a fictional kingdom where both magic and early twentieth-century technology are prevalent, against the backdrop of a war with another kingdom. It tells the story of Sophie, a young milliner who is turned into an elderly woman by a witch who enters her shop and curses her. She encounters a wizard named Howl and gets caught up in his resistance to fighting for the king..",
         "Genre": {
-          "Name": "Drama",
-          "Description": "In film and television, drama is a category of a narrative fiction or semi-fiction"
+          "Name": "Fantasy",
+          "Description": "Fantasy films are films that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds."
         },
         "Director": {
-          "Name": "Mag DeLoatch",
-          "Bio" : "Meg DeLoatch Biography, Height, Weight, Age, Measurements, Net Worth, Family, Wiki & much more! Meg DeLoatch was born on Tampa 12 Oct 1995 in and her current age 27 years old. Meg DeLoatch Weight 58.0 KG and height 5.7 Inches. Meg DeLoatch is an Producer, Writer, Additional Crew in USA. Her born home city of FL, USA. Her primary Profession is a Producer, Writer, Additional Crew. Right now Meg DeLoatch is a famous Producer, Writer, Additional Crew in the world. And her Nationality is American.",
-          "Birth" : 1995,
+          "Name": "Hayao Miyazaki",
+          "Bio" : "Hayao Miyazaki is a Japanese animator, director, producer, screenwriter, author, and manga artist. A co-founder of Studio Ghibli, he has attained international acclaim as a masterful storyteller and creator of Japanese animated feature films, and is widely regarded as one of the most accomplished filmmakers in the history of animation.",
+          "Birth" :  "January 5, 1941" ,
         },
-        "ImageUrl" : "https://en.wikipedia.org/wiki/Family_Reunion_(TV_series)#/media/File:Family_Reunion_(TV_series)_Title_Card.jpg",
-        "Featured" : false
+        "ImageUrl" : "https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle_(film)#/media/File:Howls-moving-castleposter.jpg",
+        "Featured" : true
       },
-    {
-        "Title": "Wedding Season",
-        "Description": "Two Indian Americans fake a romance through a summer of weddings to pacify their pushy parents, but family expectations soon clash with personal desires.",
+      {
+        "Title": "Spirited Away",
+        "Description": "Spirited Away tells the story of Chihiro Ogino (Hiiragi), a ten-year-old girl who, while moving to a new neighborhood, enters the world of Kami (spirits of Japanese Shinto folklore).[8] After her parents are turned into pigs by the witch Yubaba (Natsuki), Chihiro takes a job working in Yubaba's bathhouse to find a way to free herself and her parents and return to the human world.",
         "Genre": {
-          "Name": "Romance",
-          "Description": "In film and television, Romance is a category of a narrative fiction or semi-fiction based on Love and feelings"
+          "Name": "Fantasy",
+          "Description": "Fantasy films are films that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds."
         },
         "Director": {
-          "Name": "Tom Dey",
-          "Bio" : "Thomas Ridgeway Dey is an American film director, screenwriter, and producer. His credits include Shanghai Noon, Showtime, Failure to Launch, and Marmaduke",
-          "Birth" : 1965,
+          "Name": "Hayao Miyazaki",
+          "Bio" : "Hayao Miyazaki is a Japanese animator, director, producer, screenwriter, author, and manga artist. A co-founder of Studio Ghibli, he has attained international acclaim as a masterful storyteller and creator of Japanese animated feature films, and is widely regarded as one of the most accomplished filmmakers in the history of animation.",
+          "Birth" :  "January 5, 1941" ,
         },
-        "ImageUrl" : "https://occ-0-3492-879.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXUp_wC5pAH3H3DrHIMQncy8baOXpGz-PtKcCr68re2tMLglxbApDyCMw28dUOZXk_cR4mVsfkDSgxbfW7TOJkGL_MsyGJ3D-W5ABVrFdUxaVec1LwoIpqirTziwn5Ic96nVKw.jpg?r=628",
-        "Featured" : false
+        "ImageUrl" : "https://en.wikipedia.org/wiki/Spirited_Away#/media/File:Spirited_Away_Japanese_poster.png",
+        "Featured" : true
       },
     
       {
-        "Title": "Emily in Paris",
-        "Description": "Emily brings her can-do American attitude and fresh ideas to her new office in Paris, but her inability to speak French turns out to be a major Faux pas.",
+        "Title": "The Lord of the Rings: The Fellowship of the Ring ",
+        "Description": "Set in Middle-earth, the story tells of the Dark Lord Sauron, who seeks the One Ring, which contains part of his might, to return to power. The Ring has found its way to the young hobbit Frodo Baggins. The fate of Middle-earth hangs in the balance as Frodo and eight companions (who form the Fellowship of the Ring) begin their journey to Mount Doom in the land of Mordor, the only place where the Ring can be destroyed. .",
         "Genre": {
-          "Name": "Comedy",
-          "Description": "In film and television, Comedy is a category of a narrative fiction or semi-fiction with alot of humor"
+          "Name": "Fantasy",
+          "Description": "Fantasy films are films that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds."
         },
         "Director": {
-          "Name": "Darren Star",
-          "Bio" : "Darren Star is an American writer, director and producer of film and television. He is best known for creating the television series Beverly Hills, 90210, Melrose Place, Sex and the City, Younger, and Emily in Paris",
-          "Birth" : 1961,
+          "Name": "Peter Jackson",
+          "Bio" : "Sir Peter Robert Jackson is a New Zealand film director, screenwriter and producer. He is best known as the director, writer and producer of the Lord of the Rings trilogy (2001–2003) and the Hobbit trilogy (2012–2014), both of which are adapted from the novels of the same name by J. R. R. Tolkien. Other notable films include the critically lauded drama Heavenly Creatures (1994), the horror comedy The Frighteners (1996), the epic monster remake film King Kong (2005), the World War I documentary film They Shall Not Grow Old (2018) and the documentary The Beatles: Get Back (2021). He is the third-highest-grossing film director of all-time, his films having made over $6.5 billion worldwide.",
+          "Birth" : "October 31, 1961" ,
         },
-        "ImageUrl" : "https://www.netflix.com/de-en/title/81037371",
-        "Featured" : false
+        "ImageUrl" : "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring#/media/File:The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_(2001).jpg",
+        "Featured" : true
       },
 ];
 
