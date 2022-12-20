@@ -39,12 +39,12 @@ const passport = require('passport');
 require('./passport');
 
 //GET/READ REQUESTS
-app.get('/', (req, res) => {
+app.get('/',(req, res) => {
   res.send('Welcome to my movie API!');
 });
 
 // Get all users
-app.get('/users', (req, res) => {
+app.get('/users',passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.find()
     .then((users) => {
       res.status(201).json(users);
@@ -68,7 +68,7 @@ app.get('/users/:Username', passport.authenticate('jwt', { session: false }), (r
 });
 
 // GET return a list of all movies to the users
-app.get('/movies', 
+app.get('/movies', passport.authenticate('jwt', { session: false }),
 //passport.authenticate('jwt', { session: false }), 
 (req, res) => {
   Movies.find()
